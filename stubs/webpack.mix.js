@@ -69,6 +69,9 @@ mix.webpackConfig({
     './blueimp-helper': 'jQuery',
     './blueimp-gallery': 'blueimpGallery',
     './blueimp-gallery-video': 'blueimpGallery'
+  },
+  stats: {
+      children: true,
   }
 });
 
@@ -100,7 +103,7 @@ mixAssetsDir('vendor/scss/**/!(_)*.scss', (src, dest) =>
   mix.sass(src, dest.replace(/(\\|\/)scss(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), { sassOptions })
 );
 
-// Core javaScripts
+// Core JavaScripts
 mixAssetsDir('vendor/js/**/*.js', (src, dest) => mix.js(src, dest));
 
 // Libs
@@ -129,9 +132,7 @@ mixAssetsDir('css/**/*.css', (src, dest) => mix.copy(src, dest));
 // laravel working crud app related js
 mix.js('resources/js/laravel-user-management.js', 'public/js/');
 
-mix.copy('node_modules/boxicons/fonts/*', 'public/assets/vendor/fonts/boxicons');
 mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts/*', 'public/assets/vendor/fonts/fontawesome');
-mix.js('resources/js/app.js', 'public/js/alpine.js');
 
 mix.version();
 
