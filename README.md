@@ -1,27 +1,27 @@
-# master-laravel-bootstrap-jetstream
+# vuexy-laravel-bootstrap-jetstream
 
-[![Latest Stable Version](https://poser.pugx.org/themeselection/master-laravel-bootstrap-jetstream/v)](//packagist.org/packages/themeselection/master-laravel-bootstrap-jetstream)
-[![License](https://poser.pugx.org/themeselection/master-laravel-bootstrap-jetstream/license)](//packagist.org/packages/themeselection/master-laravel-bootstrap-jetstream)
+[![Latest Stable Version](https://poser.pugx.org/themeselection/vuexy-laravel-bootstrap-jetstream/v)](//packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
+[![License](https://poser.pugx.org/themeselection/vuexy-laravel-bootstrap-jetstream/license)](//packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
 
-##### Specially customized Laravel jetstream's scaffolding for [Master admin Template](#). It'll not work with any other project.
-[Download from packagist](https://packagist.org/packages/themeselection/master-laravel-bootstrap-jetstream)
+##### Specially customized Laravel jetstream's scaffolding for [Vuexy admin Template](#). It'll not work with any other project.
+[Download from packagist](https://packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
 
 ## Description
 
 Laravel Jetstream is designed using Tailwind CSS and offers your choice of Livewire or Inertia scaffolding. We have removed the Tailwind CSS dependency and modified the Livewire scaffolding as per our template. __Please note we have not provided Inertia scaffolding yet. This package only works with livewire scaffolding__.
 
-Master Laravel Jetstream is a lightweight laravel package that focuses on the `VIEW` side of [Jetstream](https://github.com/laravel/jetstream) package installed in your Laravel application, so when a swap is performed, the `Action`, `MODEL`, `CONTROLLER`, `Component` and `Action` classes of your project is still 100% handled by Laravel development team with no added layer of complexity.
+Vuexy Laravel Jetstream is a lightweight laravel package that focuses on the `VIEW` side of [Jetstream](https://github.com/laravel/jetstream) package installed in your Laravel application, so when a swap is performed, the `Action`, `MODEL`, `CONTROLLER`, `Component` and `Action` classes of your project is still 100% handled by Laravel development team with no added layer of complexity.
 
 ## Table of Content
 
-- [master-laravel-bootstrap-jetstream](#master-laravel-bootstrap-jetstream)
-        - [Specially customized Laravel jetstream's scaffolding for Master admin Template. It'll not work with any other project.](#specially-customized-laravel-jetstreams-scaffolding-for-master-admin-template-itll-not-work-with-any-other-project)
+- [vuexy-laravel-bootstrap-jetstream](#vuexy-laravel-bootstrap-jetstream)
+        - [Specially customized Laravel jetstream's scaffolding for Vuexy admin Template. It'll not work with any other project.](#specially-customized-laravel-jetstreams-scaffolding-for-vuexy-admin-template-itll-not-work-with-any-other-project)
   - [Description](#description)
   - [Table of Content](#table-of-content)
   - [Installation](#installation)
     - [Installing Jetstream](#installing-jetstream)
       - [Install Jetstream With Livewire](#install-jetstream-with-livewire)
-    - [Install Master Laravel Bootstrap Jetstream](#install-master-laravel-bootstrap-jetstream)
+    - [Install Vuexy Laravel Bootstrap Jetstream](#install-vuexy-laravel-bootstrap-jetstream)
     - [Finalizing The Installation](#finalizing-the-installation)
     - [Extras](#extras)
       - [Pagination](#pagination)
@@ -35,7 +35,7 @@ Master Laravel Jetstream is a lightweight laravel package that focuses on the `V
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream
+composer require laravel/jetstream:2.8.5
 
 ```
 
@@ -56,18 +56,18 @@ php artisan jetstream:install livewire --teams
 
 ```
 
-### Install Master Laravel Bootstrap Jetstream
+### Install Vuexy Laravel Bootstrap Jetstream
 
-Use Composer to install Master Jetstream into your new Laravel project as dev dependency:
+Use Composer to install Vuexy Jetstream into your new Laravel project as dev dependency:
 
 ```
 
-composer require themeselection/master-laravel-bootstrap-jetstream --dev
+composer require themeselection/vuexy-laravel-bootstrap-jetstream --dev
  
 
 ```
 
-Regardless how you install Jetstream, Master Laravel Bootstrap Jetstream commands are very similar to that
+Regardless how you install Jetstream, Vuexy Laravel Bootstrap Jetstream commands are very similar to that
 
 of Jetstream as it accepts the name of the stack you would like to swap (livewire).
 
@@ -75,19 +75,19 @@ of Jetstream as it accepts the name of the stack you would like to swap (livewir
 
 You are highly encouraged to read through the entire documentation of [Jetstream](https://jetstream.laravel.com/1.x/introduction.html)
 
-before beginning your Master Laravel Jetsream project. In addition, you may use the `--teams` switch to swap team assets just like you would in Jetstream:
+before beginning your Vuexy Laravel Jetsream project. In addition, you may use the `--teams` switch to swap team assets just like you would in Jetstream:
 
 ```bash
 // without teams support
 
-php artisan jetstream_master:swap livewire
+php artisan jetstream_vuexy:swap livewire
 
 
 or
 
 // with teams support
 
-php artisan jetstream_master:swap livewire --teams
+php artisan jetstream_vuexy:swap livewire --teams
 
 ```
 
@@ -95,7 +95,7 @@ This will publish overrides to enable Bootstrap like the good old days!
 
 ### Finalizing The Installation
 
-After installing Master jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
+After installing Vuexy jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
 
 ```
 
@@ -166,4 +166,4 @@ This packages is built on top of [Jetstream](https://github.com/laravel/jetstrea
 
 ## License
 
-Master Jetsream is open-sourced software licensed under the [MIT license](https://github.com/themeselection/master-laravel-bootstrap-jetstream/blob/master/LICENSE).
+Vuexy Jetsream is open-sourced software licensed under the [MIT license](https://github.com/themeselection/vuexy-laravel-bootstrap-jetstream/blob/vuexy/LICENSE).
