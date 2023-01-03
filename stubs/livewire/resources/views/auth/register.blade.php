@@ -14,7 +14,7 @@ $configData = Helper::appClasses();
 
 @section('content')
 <div class="authentication-wrapper authentication-cover authentication-bg">
-  <div class="authentication-inner row m-0">
+  <div class="authentication-inner row">
     <!-- /Left Text -->
     <div class="d-none d-lg-flex col-lg-7 p-0">
       <div class="auth-cover-bg auth-cover-bg-color d-flex justify-content-center align-items-center">
