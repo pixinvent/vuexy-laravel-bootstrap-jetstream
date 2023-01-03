@@ -1,10 +1,15 @@
+@php
+$customizerHidden = 'customizer-hide';
+$configData = Helper::appClasses();
+@endphp
+
 @extends('layouts/blankLayout')
 
 @section('title', 'Verify Email')
 
 @section('page-style')
-  {{-- Page Css files --}}
-  <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/pages/page-auth.css')) }}">
+{{-- Page Css files --}}
+<link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/pages/page-auth.css')) }}">
 @endsection
 
 @section('content')
@@ -13,8 +18,8 @@
 
     <!-- Logo -->
     <div class="app-brand justify-content-center mb-5">
-      <a href="{{url('/')}}" class="app-brand-link gap-2">
-        <span class="app-brand-logo demo bg-primary">@include('_partials.macros',["height"=>20,"withbg"=>'fill: #fff;'])</span>
+      <a href="{{url('/')}}" class="app-brand-link">
+        <span class="app-brand-logo demo">@include('_partials.macros',['height'=>20,'withbg' => "fill: #fff;"])</span>
         <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
       </a>
     </div>
@@ -35,22 +40,22 @@
         <p class="text-start">
           Account activation link sent to your email address: <strong>{{Auth::user()->email}}</strong> Please follow the link inside to continue.
         </p>
-        <div class="mt-4 d-flex justify-content-between">
-            <form method="POST" action="{{ route('verification.send') }}">
-              @csrf
-              <button type="submit" class="btn btn-label-secondary">
-                click here to request another
-              </button>
-            </form>
+        <div class="mt-4 d-flex flex-column justify-content-between gap-2">
+          <form method="POST" action="{{ route('verification.send') }}">
+            @csrf
+            <button type="submit" class="w-100 btn btn-label-secondary">
+              click here to request another
+            </button>
+          </form>
 
-            <form method="POST" action="{{route('logout')}}">
-              @csrf
+          <form method="POST" action="{{route('logout')}}">
+            @csrf
 
-              <button type="submit" class="btn btn-danger">
-                Log Out
-              </button>
-            </form>
-          </div>
+            <button type="submit" class="w-100 btn btn-danger">
+              Log Out
+            </button>
+          </form>
+        </div>
       </div>
     </div>
     <!-- /Verify Email -->
