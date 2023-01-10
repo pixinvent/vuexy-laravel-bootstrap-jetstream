@@ -4,7 +4,7 @@
 [![License](https://poser.pugx.org/themeselection/vuexy-laravel-bootstrap-jetstream/license)](//packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
 
 ##### Specially customized Laravel jetstream's scaffolding for [Vuexy admin Template](#). It'll not work with any other project.
-[Download from packagist](https://packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
+[Download from packagist](https://packagist.org/packages/pixinvent/vuexy-laravel-bootstrap-jetstream)
 
 ## Description
 
