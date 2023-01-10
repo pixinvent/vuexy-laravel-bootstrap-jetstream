@@ -62,7 +62,7 @@ Use Composer to install Vuexy Jetstream into your new Laravel project as dev dep
 
 ```
 
-composer require themeselection/vuexy-laravel-bootstrap-jetstream --dev
+composer require pixinvent/vuexy-laravel-bootstrap-jetstream
  
 
 ```
