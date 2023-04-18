@@ -72,7 +72,6 @@ class InstallCommand extends Command
     $this->replaceInFile('{{-- <x-switchable-team :team="$team" /> --}}', '<x-switchable-team :team="$team" />', resource_path('views/layouts/sections/navbar/navbar.blade.php'));
     $this->replaceInFile('{{-- <x-banner /> --}}', '<x-banner />', resource_path('views/layouts/contentNavbarLayout.blade.php'));
     $this->replaceInFile('{{-- <x-banner /> --}}', '<x-banner />', resource_path('views/layouts/horizontalLayout.blade.php'));
-    $this->replaceInFile('{{-- <x-banner /> --}}', '<x-banner />', resource_path('views/layouts/navbarFullLayout.blade.php'));
 
 
     // Bootstrap Configuration...
