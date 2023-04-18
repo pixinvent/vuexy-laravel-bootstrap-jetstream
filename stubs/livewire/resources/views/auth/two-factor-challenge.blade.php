@@ -47,21 +47,21 @@ $configData = Helper::appClasses();
             Please confirm access to your account by entering one of your emergency recovery codes.
           </div>
 
-          <x-jet-validation-errors class="mb-1" />
+          <x-validation-errors class="mb-1" />
 
           <form method="POST" action="{{ route('two-factor.login') }}">
             @csrf
 
             <div class="mb-3" x-show="! recovery">
-              <x-jet-label class="form-label" value="{{ __('Code') }}" />
-              <x-jet-input class="{{ $errors->has('code') ? 'is-invalid' : '' }}" type="text" inputmode="numeric" name="code" autofocus x-ref="code" autocomplete="one-time-code" />
-              <x-jet-input-error for="code"></x-jet-input-error>
+              <x-label class="form-label" value="{{ __('Code') }}" />
+              <x-input class="{{ $errors->has('code') ? 'is-invalid' : '' }}" type="text" inputmode="numeric" name="code" autofocus x-ref="code" autocomplete="one-time-code" />
+              <x-input-error for="code"></x-input-error>
             </div>
 
             <div class="mb-3" x-show="recovery">
-              <x-jet-label class="form-label" value="{{ __('Recovery Code') }}" />
-              <x-jet-input class="{{ $errors->has('recovery_code') ? 'is-invalid' : '' }}" type="text" name="recovery_code" x-ref="recovery_code" autocomplete="one-time-code" />
-              <x-jet-input-error for="recovery_code"></x-jet-input-error>
+              <x-label class="form-label" value="{{ __('Recovery Code') }}" />
+              <x-input class="{{ $errors->has('recovery_code') ? 'is-invalid' : '' }}" type="text" name="recovery_code" x-ref="recovery_code" autocomplete="one-time-code" />
+              <x-input-error for="recovery_code"></x-input-error>
             </div>
 
             <div class="d-flex justify-content-end my-2 gap-2">
@@ -73,9 +73,9 @@ $configData = Helper::appClasses();
               </button>
             </div>
             <div class="d-flex">
-              <x-jet-button class="w-100">
+              <x-button class="w-100">
                 Log in
-              </x-jet-button>
+              </x-button>
             </div>
           </form>
         </div>
