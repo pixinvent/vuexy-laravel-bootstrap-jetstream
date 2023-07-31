@@ -8,8 +8,8 @@ $configData = Helper::appClasses();
 @section('title', 'Verify Email')
 
 @section('page-style')
-{{-- Page Css files --}}
-<link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/pages/page-auth.css')) }}">
+  {{-- Page Css files --}}
+  <link rel="stylesheet" href="{{ asset(mix('assets/vendor/css/pages/page-auth.css')) }}">
 @endsection
 
 @section('content')
@@ -38,7 +38,7 @@ $configData = Helper::appClasses();
         </div>
         @endif
         <p class="text-start">
-          Account activation link sent to your email address: <strong>{{Auth::user()->email}}</strong> Please follow the link inside to continue.
+          Account activation link sent to your email address: <span class="fw-medium">{{Auth::user()->email}}</span> Please follow the link inside to continue.
         </p>
         <div class="mt-4 d-flex flex-column justify-content-between gap-2">
           <form method="POST" action="{{ route('verification.send') }}">
@@ -48,8 +48,8 @@ $configData = Helper::appClasses();
             </button>
           </form>
 
-          <form method="POST" action="{{route('logout')}}">
-            @csrf
+            <form method="POST" action="{{route('logout')}}">
+              @csrf
 
             <button type="submit" class="w-100 btn btn-danger">
               Log Out

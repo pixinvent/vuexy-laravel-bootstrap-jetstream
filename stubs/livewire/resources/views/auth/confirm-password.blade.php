@@ -50,7 +50,7 @@ $configData = Helper::appClasses();
             </div>
             @error('password')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>

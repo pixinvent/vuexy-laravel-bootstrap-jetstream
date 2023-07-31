@@ -54,7 +54,7 @@ $configData = Helper::appClasses();
             <input type="text" class="form-control @error('email') is-invalid @enderror" id="login-email" name="email" placeholder="john@example.com" autofocus value="{{ old('email') }}">
             @error('email')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -67,7 +67,7 @@ $configData = Helper::appClasses();
               </a>
               @endif
             </div>
-            <div class="input-group input-group-merge">
+            <div class="input-group input-group-merge @error('password') is-invalid @enderror">
               <input type="password" id="login-password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
               <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
               @error('password')

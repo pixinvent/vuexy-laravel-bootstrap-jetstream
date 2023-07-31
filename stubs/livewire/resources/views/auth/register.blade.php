@@ -48,7 +48,7 @@ $configData = Helper::appClasses();
             <input type="text" class="form-control @error('name') is-invalid @enderror" id="username" name="name" placeholder="johndoe" autofocus value="{{ old('name') }}" />
             @error('name')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -57,7 +57,7 @@ $configData = Helper::appClasses();
             <input type="text" class="form-control @error('email') is-invalid @enderror" id="email" name="email" placeholder="john@example.com" value="{{ old('email') }}" />
             @error('email')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -71,7 +71,7 @@ $configData = Helper::appClasses();
             </div>
             @error('password')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -101,9 +101,7 @@ $configData = Helper::appClasses();
             </div>
           </div>
           @endif
-          <button type="submit" class="btn btn-primary d-grid w-100">
-            Sign up
-          </button>
+          <button type="submit" class="btn btn-primary d-grid w-100">Sign up</button>
         </form>
 
         <p class="text-center mt-2">

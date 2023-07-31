@@ -35,7 +35,7 @@ Vuexy Laravel Jetstream is a lightweight laravel package that focuses on the `VI
 You may use Composer to install Jetstream into your new Laravel project:
 
 ```
-composer require laravel/jetstream:2.8.5
+composer require laravel/jetstream:3.2.4
 
 ```
 
@@ -53,7 +53,6 @@ or
 // with teams support
 
 php artisan jetstream:install livewire --teams
-
 ```
 
 ### Install Vuexy Laravel Bootstrap Jetstream
@@ -61,10 +60,7 @@ php artisan jetstream:install livewire --teams
 Use Composer to install Vuexy Jetstream into your new Laravel project as dev dependency:
 
 ```
-
 composer require pixinvent/vuexy-laravel-bootstrap-jetstream
- 
-
 ```
 
 Regardless how you install Jetstream, Vuexy Laravel Bootstrap Jetstream commands are very similar to that
@@ -75,7 +71,7 @@ of Jetstream as it accepts the name of the stack you would like to swap (livewir
 
 You are highly encouraged to read through the entire documentation of [Jetstream](https://jetstream.laravel.com/1.x/introduction.html)
 
-before beginning your Vuexy Laravel Jetsream project. In addition, you may use the `--teams` switch to swap team assets just like you would in Jetstream:
+before beginning your Vuexy Laravel Jetstream project. In addition, you may use the `--teams` switch to swap team assets just like you would in Jetstream:
 
 ```bash
 // without teams support
@@ -98,7 +94,6 @@ This will publish overrides to enable Bootstrap like the good old days!
 After installing Vuexy jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
 
 ```
-
 npm install && npm run dev
 
 or  
@@ -107,7 +102,6 @@ yarn && yarn dev
 
 
 php artisan migrate
-
 ```
 
 ### Extras
@@ -117,19 +111,14 @@ php artisan migrate
 It is also important to point out that Laravel still includes pagination views built using Bootstrap CSS. To use these views instead of the default Tailwind views, you may call the paginator's useBootstrap method within your AppServiceProvider:
 
 ```php
-
-  
-
 <?php
-
 
 namespace  App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Pagination\Paginator;
 
-class  AppServiceProvider  extends  ServiceProvider
-{
+class  AppServiceProvider  extends  ServiceProvider{
 
 /**
 * Register any application services.
@@ -137,8 +126,7 @@ class  AppServiceProvider  extends  ServiceProvider
 * @return  void
 */
 
-public  function  register()
-{
+public  function  register(){
 
 //
   
@@ -149,15 +137,13 @@ public  function  register()
 * @return  void
 */
 
-public  function  boot()
-{
+public  function  boot(){
 
 Paginator::useBootstrap();
 
 }
 
 }
-
 ```
 
 ## Credits
