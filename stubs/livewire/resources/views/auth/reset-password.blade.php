@@ -25,17 +25,16 @@ $configData = Helper::appClasses();
     </div>
     <!-- /Left Text -->
     <!-- Reset Password -->
-    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-5 p-4">
+    <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
       <div class="w-px-400 mx-auto">
         <!-- Logo -->
-        <div class="app-brand justify-content-center mb-5">
+        <div class="app-brand mb-4">
           <a href="{{url('/')}}" class="app-brand-link">
             <span class="app-brand-logo demo">@include('_partials.macros',["height"=>20,"withbg"=>'fill: #fff;'])</span>
-            <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
-        <h4 class="mb-2">Reset Password 🔒</h4>
+        <h3 class="mb-1">Reset Password 🔒</h3>
         <form id="formAuthentication" class="mb-3" action="{{ route('password.update') }}" method="POST">
           @csrf
           <input type="hidden" name="token" value="{{ $request->route('token') }}">
