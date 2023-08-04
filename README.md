@@ -1,7 +1,7 @@
 # vuexy-laravel-bootstrap-jetstream
 
-[![Latest Stable Version](https://poser.pugx.org/themeselection/vuexy-laravel-bootstrap-jetstream/v)](//packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
-[![License](https://poser.pugx.org/themeselection/vuexy-laravel-bootstrap-jetstream/license)](//packagist.org/packages/themeselection/vuexy-laravel-bootstrap-jetstream)
+[![Latest Stable Version](https://poser.pugx.org/pixinvent/vuexy-laravel-bootstrap-jetstream/v)](//packagist.org/packages/pixinvent/vuexy-laravel-bootstrap-jetstream)
+[![License](https://poser.pugx.org/pixinvent/vuexy-laravel-bootstrap-jetstream/license)](//packagist.org/packages/pixinvent/vuexy-laravel-bootstrap-jetstream)
 
 ##### Specially customized Laravel jetstream's scaffolding for [Vuexy admin Template](#). It'll not work with any other project.
 [Download from packagist](https://packagist.org/packages/pixinvent/vuexy-laravel-bootstrap-jetstream)
@@ -91,7 +91,7 @@ This will publish overrides to enable Bootstrap like the good old days!
 
 ### Finalizing The Installation
 
-After installing Vuexy jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
+After installing Vuexy Jetstream and swapping Jetstream resources, remove tailwindCSS and its dependencies if any from your package.json and then install and build your NPM dependencies and migrate your database:
 
 ```
 npm install && npm run dev
@@ -152,4 +152,4 @@ This packages is built on top of [Jetstream](https://github.com/laravel/jetstrea
 
 ## License
 
-Vuexy Jetsream is open-sourced software licensed under the [MIT license](https://github.com/themeselection/vuexy-laravel-bootstrap-jetstream/blob/vuexy/LICENSE).
+Vuexy Jetstream is open-sourced software licensed under the [MIT license](https://github.com/pixinvent/vuexy-laravel-bootstrap-jetstream/blob/vuexy/LICENSE).
