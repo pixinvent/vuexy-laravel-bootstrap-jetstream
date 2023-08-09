@@ -27,17 +27,16 @@ $configData = Helper::appClasses();
     <!-- /Left Text -->
 
     <!-- Two Steps Verification -->
-    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-4 p-sm-5">
+    <div class="d-flex col-12 col-lg-5 align-items-center p-4 p-sm-5">
       <div class="w-px-400 mx-auto">
         <!-- Logo -->
-        <div class="app-brand justify-content-center mb-5">
+        <div class="app-brand mb-4">
           <a href="{{url('/')}}" class="app-brand-link">
             <span class="app-brand-logo demo">@include('_partials.macros',['height'=>20,'withbg' => "fill: #fff;"])</span>
-            <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
-        <h4 class="mb-3">Two Step Verification 💬</h4>
+        <h3 class="mb-1">Two Step Verification 💬</h3>
         <div x-data="{ recovery: false }">
           <div class="mb-3" x-show="! recovery">
             Please confirm access to your account by entering the authentication code provided by your authenticator application.

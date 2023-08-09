@@ -26,17 +26,16 @@ $configData = Helper::appClasses();
     <!-- /Left Text -->
 
     <!-- Login -->
-    <div class="d-flex col-12 col-lg-5 align-items-center authentication-bg p-sm-5 p-4">
+    <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
       <div class="w-px-400 mx-auto">
         <!-- Logo -->
-        <div class="app-brand justify-content-center mb-5">
+        <div class="app-brand mb-4">
           <a href="{{url('/')}}" class="app-brand-link">
             <span class="app-brand-logo demo">@include('_partials.macros',["height"=>20,"withbg"=>'fill: #fff;'])</span>
-            <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
           </a>
         </div>
         <!-- /Logo -->
-        <h4 class="mb-2">Welcome to {{config('variables.templateName')}}! 👋</h4>
+        <h3 class="mb-1">Welcome to {{config('variables.templateName')}}! 👋</h3>
         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
         @if (session('status'))
@@ -54,7 +53,7 @@ $configData = Helper::appClasses();
             <input type="text" class="form-control @error('email') is-invalid @enderror" id="login-email" name="email" placeholder="john@example.com" autofocus value="{{ old('email') }}">
             @error('email')
             <span class="invalid-feedback" role="alert">
-              <strong>{{ $message }}</strong>
+              <span class="fw-medium">{{ $message }}</span>
             </span>
             @enderror
           </div>
@@ -67,15 +66,15 @@ $configData = Helper::appClasses();
               </a>
               @endif
             </div>
-            <div class="input-group input-group-merge">
+            <div class="input-group input-group-merge @error('password') is-invalid @enderror">
               <input type="password" id="login-password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;" aria-describedby="password" />
               <span class="input-group-text cursor-pointer"><i class="ti ti-eye-off"></i></span>
-              @error('password')
-              <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
-              @enderror
             </div>
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+              <span class="fw-medium">{{ $message }}</span>
+            </span>
+            @enderror
           </div>
           <div class="mb-3">
             <div class="form-check">

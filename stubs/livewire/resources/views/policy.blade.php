@@ -11,10 +11,9 @@
 <div class="authentication-wrapper authentication-basic px-4">
   <div class="authentication-inner py-4">
     <!-- Logo -->
-    <div class="app-brand justify-content-center mb-5">
+    <div class="app-brand mb-4">
       <a href="{{url('/')}}" class="app-brand-link gap-2">
-        <span class="app-brand-logo demo bg-primary">@include('_partials.macros',["height"=>20,"withbg"=>'fill: #fff;'])</span>
-        <span class="app-brand-text demo text-body fw-bold">{{config('variables.templateName')}}</span>
+        <span class="app-brand-logo demo">@include('_partials.macros',["height"=>20,"withbg"=>'fill: #fff;'])</span>
       </a>
     </div>
     <!-- /Logo -->
