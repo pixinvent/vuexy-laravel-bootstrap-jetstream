@@ -25,7 +25,7 @@ $configData = Helper::appClasses();
     </div>
     <!-- /Left Text -->
 
-    <!-- Register Card -->
+    <!-- Register -->
     <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
       <div class="w-px-400 mx-auto">
         <!-- Logo -->
@@ -87,13 +87,9 @@ $configData = Helper::appClasses();
               <div class="form-check @error('terms') is-invalid @enderror">
                 <input class="form-check-input @error('terms') is-invalid @enderror" type="checkbox" id="terms" name="terms" />
                 <label class="form-check-label" for="terms">
-                I agree to the
-                    <a href="{{ route('terms.show') }}" target="_blank">
-                  terms_of_service
-                </a> and
-                    <a href="{{ route('policy.show') }}" target="_blank">
-                  privacy_policy
-                    </a>
+                  I agree to the
+                  <a href="{{ route('policy.show') }}" target="_blank">privacy policy</a> &
+                  <a href="{{ route('terms.show') }}" target="_blank">terms</a>
                 </label>
               </div>
               @error('terms')
@@ -134,7 +130,7 @@ $configData = Helper::appClasses();
         </div>
       </div>
     </div>
-    <!-- /Register Card -->
+    <!-- /Register -->
   </div>
 </div>
 @endsection

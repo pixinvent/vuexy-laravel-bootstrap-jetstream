@@ -31,8 +31,7 @@ mix.webpackConfig({
     new IgnorePlugin({
       checkResource(resource, context) {
         return [
-          path.join(__dirname, 'resources/assets/vendor/libs/@form-validation'),
-          path.join(__dirname, 'resources/assets/vendor/libs/i18n')
+          path.join(__dirname, 'resources/assets/vendor/libs/@form-validation')
           // Add more paths to ignore as needed
         ].some(pathToIgnore => resource.startsWith(pathToIgnore));
       }
@@ -137,9 +136,9 @@ mixAssetsDir('js/**/*.js', (src, dest) => mix.scripts(src, dest));
 mixAssetsDir('css/**/*.css', (src, dest) => mix.copy(src, dest));
 // laravel working crud app related js
 mix.js('resources/js/laravel-user-management.js', 'public/js/');
-mix.copy('node_modules/katex/dist/fonts/*', 'public/assets/vendor/libs/quill/fonts');
-mix.js('resources/js/app.js', 'public/js/alpine.js');
 
+mix.copy('node_modules/flag-icons/flags/1x1/*', 'public/assets/vendor/fonts/flags/1x1');
+mix.copy('node_modules/flag-icons/flags/4x3/*', 'public/assets/vendor/fonts/flags/4x3');
 mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts/*', 'public/assets/vendor/fonts/fontawesome');
 mix.copy('node_modules/katex/dist/fonts/*', 'public/assets/vendor/libs/quill/fonts');
 
