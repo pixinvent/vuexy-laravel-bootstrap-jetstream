@@ -64,17 +64,13 @@ $configData = Helper::appClasses();
             </div>
 
             <div class="d-flex justify-content-end my-2 gap-2">
-              <button type="button" class="btn btn-outline-secondary me-1" x-show="! recovery" x-on:click="recovery = true; $nextTick(() => { $refs.recovery_code.focus()})">Use a recovery code
-              </button>
-
-              <button type="button" class="btn btn-outline-secondary me-1" x-show="recovery" x-on:click=" recovery = false; $nextTick(() => { $refs.code.focus() })">
-                Use an authentication code
-              </button>
-            </div>
-            <div class="d-flex">
-              <x-button class="w-100">
-                Log in
-              </x-button>
+              <div x-show="! recovery" x-on:click="recovery = true; $nextTick(() => { $refs.recovery_code.focus()})">
+                <button type="button" class="btn btn-outline-secondary me-1">Use a recovery code</button>
+              </div>
+              <div x-cloak x-show="recovery" x-on:click="recovery = false; $nextTick(() => { $refs.code.focus() })">
+                <button type="button" class="btn btn-outline-secondary me-1">Use an authentication code</button>
+              </div>
+              <x-button>Log in</x-button>
             </div>
           </form>
         </div>
