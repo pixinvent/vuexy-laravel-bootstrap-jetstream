@@ -79,4 +79,5 @@ $configData = Helper::appClasses();
     <!-- / Two Steps Verification -->
   </div>
 </div>
+
 @endsection
