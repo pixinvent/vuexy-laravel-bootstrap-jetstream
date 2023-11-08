@@ -26,7 +26,7 @@ $configData = Helper::appClasses();
     </div>
     <!-- /Left Text -->
     <!--  password confirm -->
-    <div class="d-flex col-12 col-lg-5 col-xl-4 align-items-center authentication-bg p-sm-5 p-4">
+    <div class="d-flex col-12 col-lg-5 align-items-center p-sm-5 p-4">
       <div class="w-px-400 mx-auto">
         <!-- Logo -->
         <div class="app-brand mb-4">
