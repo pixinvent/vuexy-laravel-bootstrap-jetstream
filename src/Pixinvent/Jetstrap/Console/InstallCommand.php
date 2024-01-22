@@ -37,6 +37,11 @@ class InstallCommand extends Command
       (new Filesystem)->delete(base_path('tailwind.config.js'));
     }
 
+    // Remove vite.config.js Configuration...
+    if ((new Filesystem)->exists(base_path('vite.config.js'))) {
+      (new Filesystem)->delete(base_path('vite.config.js'));
+    }
+    
     if ((new Filesystem)->exists(resource_path('views/dashboard.blade.php'))) {
       (new Filesystem)->delete(resource_path('views/dashboard.blade.php'));
     }
@@ -63,6 +68,7 @@ class InstallCommand extends Command
 
     // "/" Route...
     $this->replaceInFile('/dashboard', '/', app_path('Providers/RouteServiceProvider.php'));
+    $this->replaceInFile('/dashboard', '/', base_path('config/fortify.php'));
 
     // Update postcss.config.js
     $codeSnippet = <<<'EOD'
