@@ -1,4 +1,6 @@
 @php
+use Illuminate\Support\Facades\Route;
+$configData = Helper::appClasses();
 $customizerHidden = 'customizer-hide';
 $configData = Helper::appClasses();
 @endphp
