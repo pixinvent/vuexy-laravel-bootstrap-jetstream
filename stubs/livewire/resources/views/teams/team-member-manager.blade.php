@@ -33,7 +33,7 @@
 
         <!-- Role -->
         @if (count($this->roles) > 0)
-          <div class="my-5">
+          <div class="my-6">
             <div>
               <x-label class="form-label" for="role" value="{{ __('Role') }}" />
 
