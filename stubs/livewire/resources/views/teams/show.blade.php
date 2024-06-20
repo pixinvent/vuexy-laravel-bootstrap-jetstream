@@ -1,13 +1,14 @@
 @extends('layouts.layoutMaster')
 
 @php
-$breadcrumbs = [['link' => 'home', 'name' => 'Home'], ['name' => 'Team Settings']];
+  use Illuminate\Support\Facades\Gate;
+  $breadcrumbs = [['link' => 'home', 'name' => 'Home'], ['name' => 'Team Settings']];
 @endphp
 
 @section('title', 'Team Settings')
 
 @section('content')
-  <div class="mb-4">
+  <div class="mb-6">
     @livewire('teams.update-team-name-form', ['team' => $team])
   </div>
 
@@ -16,7 +17,7 @@ $breadcrumbs = [['link' => 'home', 'name' => 'Home'], ['name' => 'Team Settings'
 
   @if (Gate::check('delete', $team) && !$team->personal_team)
 
-  <div class="mt-4">
+  <div class="mt-6">
     @livewire('teams.delete-team-form', ['team' => $team])
   </div>
   @endif
