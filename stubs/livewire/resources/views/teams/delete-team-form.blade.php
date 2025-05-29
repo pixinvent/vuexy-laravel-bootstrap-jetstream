@@ -1,5 +1,5 @@
 @php
-  use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Gate;
 @endphp
 <x-action-section>
   <x-slot name="title">
