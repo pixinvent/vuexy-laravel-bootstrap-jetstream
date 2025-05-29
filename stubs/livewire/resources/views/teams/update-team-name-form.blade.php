@@ -1,5 +1,5 @@
 @php
-  use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Gate;
 @endphp
 <x-form-section submit="updateTeamName">
   <x-slot name="title">
@@ -20,8 +20,9 @@
       <x-label class="form-label" value="{{ __('Team Owner') }}" />
 
       <div class="d-flex justify-content-start align-items-center user-name">
-        <div class="avatar me-4"><img src="{{ $team->owner->profile_photo_url }}" alt="{{ $team->owner->name }}" alt="Avatar" class="rounded-circle"></div>
-         <div class="d-flex flex-column">
+        <div class="avatar me-4"><img src="{{ $team->owner->profile_photo_url }}" alt="{{ $team->owner->name }}"
+            alt="Avatar" class="rounded-circle"></div>
+        <div class="d-flex flex-column">
           <h6 class="mb-1">{{ $team->owner->name }}</h6>
           <small>{{ $team->owner->email }}</small>
         </div>
@@ -32,7 +33,8 @@
     <div class="mb-6">
       <x-label class="form-label" for="name" value="{{ __('Team Name') }}" />
 
-      <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model="state.name" :disabled="! Gate::check('update', $team)" />
+      <x-input id="name" type="text" class="{{ $errors->has('name') ? 'is-invalid' : '' }}" wire:model="state.name"
+        :disabled="! Gate::check('update', $team)" />
 
       <x-input-error for="name" />
     </div>

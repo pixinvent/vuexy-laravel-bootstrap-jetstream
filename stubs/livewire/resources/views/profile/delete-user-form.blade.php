@@ -30,8 +30,7 @@
         <div class="mt-2" x-data="{}"
           x-on:confirming-delete-user.window="setTimeout(() => $refs.password.focus(), 250)">
           <x-input type="password" class="{{ $errors->has('password') ? 'is-invalid' : '' }}"
-            placeholder="{{ __('Password') }}" x-ref="password" wire:model="password"
-            wire:keydown.enter="deleteUser" />
+            placeholder="{{ __('Password') }}" x-ref="password" wire:model="password" wire:keydown.enter="deleteUser" />
 
           <x-input-error for="password" />
         </div>

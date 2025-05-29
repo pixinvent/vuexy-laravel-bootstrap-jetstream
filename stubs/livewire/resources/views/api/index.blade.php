@@ -6,13 +6,6 @@ $breadcrumbs = [['link' => 'home', 'name' => 'Home'], ['name' => 'API Tokens']];
 
 @section('title', 'API Tokens')
 
-
-@section('page-style')
-@vite([
-  'resources/assets/vendor/scss/pages/page-auth.scss'
-])
-@endsection
-
 @section('content')
-  @livewire('api.api-token-manager')
+@livewire('api.api-token-manager')
 @endsection

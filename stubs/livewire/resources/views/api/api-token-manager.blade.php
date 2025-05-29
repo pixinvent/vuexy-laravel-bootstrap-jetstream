@@ -24,29 +24,32 @@
 
       <!-- Token Permissions -->
       @if (Laravel\Jetstream\Jetstream::hasPermissions())
-        <div>
-          <x-label class="form-label" for="permissions" value="{{ __('Permissions') }}" />
+      <div>
+        <x-label class="form-label" for="permissions" value="{{ __('Permissions') }}" />
 
-          <div class="mt-2 row">
-            @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
-              <div class="col-6">
-                <div class="mb-3">
-                  <div class="form-check">
-                    <x-checkbox wire:model="createApiTokenForm.permissions"
-                      id="{{ 'create-' . $permission }}" :value="$permission" />
-                    <label class="form-check-label" for="{{ 'create-' . $permission }}">
-                      {{ $permission }}
-                    </label>
-                  </div>
-                </div>
+        <div class="mt-2 row">
+          @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
+          <div class="col-6">
+            <div class="mb-3">
+              <div class="form-check">
+                <x-checkbox wire:model="createApiTokenForm.permissions" id="{{ 'create-' . $permission }}"
+                  :value="$permission" />
+                <label class="form-check-label" for="{{ 'create-' . $permission }}">
+                  {{ $permission }}
+                </label>
               </div>
-            @endforeach
+            </div>
           </div>
+          @endforeach
         </div>
+      </div>
       @endif
     </x-slot>
 
     <x-slot name="actions">
+      <x-action-message on="created">
+        {{ __('Created.') }}
+      </x-action-message>
       <x-button>
         {{ __('Create') }}
       </x-button>
@@ -55,51 +58,50 @@
 
   @if ($this->user->tokens->isNotEmpty())
 
-    <!-- Manage API Tokens -->
-    <div class="mt-4">
-      <x-action-section>
-        <x-slot name="title">
-          {{ __('Manage API Tokens') }}
-        </x-slot>
+  <!-- Manage API Tokens -->
+  <div class="mt-4">
+    <x-action-section>
+      <x-slot name="title">
+        {{ __('Manage API Tokens') }}
+      </x-slot>
 
-        <x-slot name="description">
-          {{ __('You may delete any of your existing tokens if they are no longer needed.') }}
-        </x-slot>
+      <x-slot name="description">
+        {{ __('You may delete any of your existing tokens if they are no longer needed.') }}
+      </x-slot>
 
-        <!-- API Token List -->
-        <x-slot name="content">
-          <div>
-            @foreach ($this->user->tokens->sortBy('name') as $token)
-              <div class="d-flex justify-content-between align-items-center mb-2">
-                <div class="fw-medium">
-                  {{ $token->name }}
-                </div>
+      <!-- API Token List -->
+      <x-slot name="content">
+        <div>
+          @foreach ($this->user->tokens->sortBy('name') as $token)
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-medium">
+              {{ $token->name }}
+            </div>
 
-                <div class="d-flex">
-                  @if ($token->last_used_at)
-                    <div class="text-muted">
-                      {{ __('Last used') }} {{ $token->last_used_at->diffForHumans() }}
-                    </div>
-                  @endif
-
-                  @if (Laravel\Jetstream\Jetstream::hasPermissions())
-                    <button class="btn btn-link text-secondary me-2"
-                      wire:click="manageApiTokenPermissions({{ $token->id }})">
-                      {{ __('Permissions') }}
-                    </button>
-                  @endif
-
-                  <button class="btn btn-link text-danger text-decoration-none"
-                    wire:click="confirmApiTokenDeletion({{ $token->id }})">
-                    {{ __('Delete') }}
-                  </button>
-                </div>
+            <div class="d-flex">
+              @if ($token->last_used_at)
+              <div class="text-body-secondary">
+                {{ __('Last used') }} {{ $token->last_used_at->diffForHumans() }}
               </div>
-            @endforeach
+              @endif
+
+              @if (Laravel\Jetstream\Jetstream::hasPermissions())
+              <button class="btn btn-link text-secondary me-2" wire:click="manageApiTokenPermissions({{ $token->id }})">
+                {{ __('Permissions') }}
+              </button>
+              @endif
+
+              <button class="btn btn-link text-danger text-decoration-none"
+                wire:click="confirmApiTokenDeletion({{ $token->id }})">
+                {{ __('Delete') }}
+              </button>
+            </div>
           </div>
-        </x-slot>
-      </x-action-section>
-    </div>
+          @endforeach
+        </div>
+      </x-slot>
+    </x-action-section>
+  </div>
   @endif
 
   <!-- Token Value Modal -->
@@ -113,7 +115,7 @@
         {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
       </div>
 
-      <div class="mb-6">
+      <div>
         <x-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken" autofocus autocomplete="off"
           autocorrect="off" autocapitalize="off" spellcheck="false"
           @showing-token-modal.window="setTimeout(() => $refs.plaintextToken.select(), 250)" />
@@ -136,17 +138,17 @@
     <x-slot name="content">
       <div class="mt-2 row">
         @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
-          <div class="col-6">
-            <div class="mb-3">
-              <div class="form-check">
-                <x-checkbox wire:model="updateApiTokenForm.permissions" id="{{ 'update-' . $permission }}"
-                  :value="$permission" />
-                <label class="form-check-label" for="{{ 'update-' . $permission }}">
-                  {{ $permission }}
-                </label>
-              </div>
+        <div class="col-6">
+          <div class="mb-3">
+            <div class="form-check">
+              <x-checkbox wire:model="updateApiTokenForm.permissions" id="{{ 'update-' . $permission }}"
+                :value="$permission" />
+              <label class="form-check-label" for="{{ 'update-' . $permission }}">
+                {{ $permission }}
+              </label>
             </div>
           </div>
+        </div>
         @endforeach
       </div>
     </x-slot>
